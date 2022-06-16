@@ -1,11 +1,12 @@
-#All Rights Reserved ® Muhammad Raihan Wibowo, Muhammad Wima Fathurrahman
-
 import pandas as pd
 
 import bokeh
 from bokeh.io import curdoc
 from bokeh.models.widgets import Tabs
-from bokeh.plotting import show
+from bokeh.io import output_file, output_notebook
+from bokeh.plotting import figure, show
+
+
 
 from os.path import dirname, join
 
@@ -21,4 +22,9 @@ tab2 = femaleplot_tab(femaleperc)
 tab3 = table_tab(world_population)
 tabs = Tabs(tabs = [tab1, tab2, tab3])
 
+
+curdoc().add_root(tabs)
+'''
+output_file('output.html',title = 'Population')
 show(tabs)
+'''
