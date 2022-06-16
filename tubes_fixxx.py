@@ -5,6 +5,7 @@ import pandas as pd
 import bokeh
 from bokeh.io import curdoc
 from bokeh.models.widgets import Tabs
+from bokeh.plotting import show
 
 from os.path import dirname, join
 
@@ -20,4 +21,4 @@ tab2 = femaleplot_tab(femaleperc)
 tab3 = table_tab(world_population)
 tabs = Tabs(tabs = [tab1, tab2, tab3])
 
-curdoc().add_root(tabs)
+show(tabs)
