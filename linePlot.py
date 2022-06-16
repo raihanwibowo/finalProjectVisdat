@@ -3,7 +3,7 @@ import bokeh
 
 from bokeh.plotting import figure
 from bokeh.models import HoverTool, ColumnDataSource, RangeSlider, Select, Panel
-from bokeh.layouts import widgetbox, row, gridplot
+from bokeh.layouts import Column, row, gridplot
 
 def lineplot_tab(data):
     #Setting source
@@ -73,7 +73,7 @@ def lineplot_tab(data):
     
     plot = style(plot)
 
-    layout = row(widgetbox(x_select, y_select, range_slider), plot)
+    layout = row(Column(x_select, y_select, range_slider), plot)
     tab = Panel(child=layout, title = 'World Population Plot')
     
     return tab

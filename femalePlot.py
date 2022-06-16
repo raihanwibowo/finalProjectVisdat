@@ -4,7 +4,7 @@ import bokeh
 
 from bokeh.plotting import figure
 from bokeh.models import HoverTool, ColumnDataSource, Slider, Select, Panel
-from bokeh.layouts import widgetbox, row, gridplot
+from bokeh.layouts import Column, row, gridplot
 
 def femaleplot_tab(data):
     #Setting the data
@@ -60,7 +60,7 @@ def femaleplot_tab(data):
     slider = Slider(start=1960, end=2017, step=1, value=1960, title='Year')
     slider.on_change('value',update_plot)
     plot = style(plot)
-    layout = row(widgetbox(slider), plot)
+    layout = row(Column(slider), plot)
     tab = Panel(child=layout, title = 'Female Percentage Plot')
     
     return tab
