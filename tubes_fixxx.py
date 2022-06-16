@@ -1,4 +1,4 @@
-#All Rights Reserved ® Muhammad Kiko Reiki, Deviya Yuliani, Siti Inayah Putri
+#All Rights Reserved ® Muhammad Raihan Wibowo, Muhammad Wima Fathurrahman
 
 import pandas as pd
 
