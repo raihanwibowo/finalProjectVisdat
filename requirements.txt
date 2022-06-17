@@ -92,4 +92,5 @@ urllib3==1.26.7
 watchdog==2.1.6
 wcwidth==0.2.5
 webencodings==0.5.1
+wordcloud==1.8.1
 zipp==3.6.0
