@@ -3,7 +3,7 @@ import bokeh
 
 from bokeh.plotting import figure
 from bokeh.models import HoverTool, ColumnDataSource, RangeSlider, Select, Panel
-from bokeh.layouts import Column, row, gridplot
+from bokeh.layouts import Column, row
 
 def lineplot_tab(data):
     #Setting source
