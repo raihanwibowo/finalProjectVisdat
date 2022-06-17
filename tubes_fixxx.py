@@ -27,6 +27,6 @@ curdoc().add_root(tabs)
 curdoc().title = "My test"
 
 '''
-output_file('output.html',title = 'Population')
+output_file('index.html',title = 'Population')
 show(tabs)
 '''
