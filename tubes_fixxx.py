@@ -26,6 +26,6 @@ tabs = Tabs(tabs = [tab1, tab2, tab3])
 curdoc().add_root(tabs)
 
 '''
-output_file('output.html',title = 'Population')
+output_file('index.html',title = 'Population')
 show(tabs)
 '''
