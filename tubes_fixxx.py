@@ -22,3 +22,4 @@ tabs = Tabs(tabs = [tab1, tab2, tab3])
 
 
 curdoc().add_root(tabs)
+curdoc().title = "My test"
