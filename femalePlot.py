@@ -3,8 +3,8 @@ import numpy as np
 import bokeh
 
 from bokeh.plotting import figure
-from bokeh.models import HoverTool, ColumnDataSource, Slider, Select, Panel
-from bokeh.layouts import Column, row, gridplot
+from bokeh.models import HoverTool, ColumnDataSource, Slider, Panel
+from bokeh.layouts import Column, row
 
 def femaleplot_tab(data):
     #Setting the data
@@ -21,26 +21,26 @@ def femaleplot_tab(data):
         'country': data.loc[1970].Country,})
     
     #Making Plot
-    plot = figure(x_range=(0,100), title='Female Population Percentage for 1970', 
-                  x_axis_label='Country', y_axis_label='Female Perc',
+    plot = figure(x_range=(0,100), title='Female Population Percentage for 1960', 
+                  x_axis_label='Country 1 - 100', y_axis_label='Female Perc',
                   plot_height=400, plot_width=700)
     
     hover = HoverTool(tooltips=[('Country','@country'),('Value','@y')])
     plot.add_tools(hover)
 
     # Add a circle glyph
-    plot.circle(x='x', y='y', source=source, size=10, color="firebrick", alpha=0.5)
+    plot.circle(x='x', y='y', source=source, size=10, color="magenta", alpha=0.5)
     
     def update_plot(attr, old, new):
-        yr = slider.value
-        x = np.arange(0,len(data.loc[yr].Country))
+        year = slider.value
+        x = np.arange(0,len(data.loc[year].Country))
 
         new_data = {'x': x,
-                    'y': data.loc[yr].Count,
-                    'country': data.loc[yr].Country,}
+                    'y': data.loc[year].Count,
+                    'country': data.loc[year].Country,}
         source.data = new_data
    
-        plot.title.text = 'Female Population Percentage for %d' % yr
+        plot.title.text = 'Female Population Percentage for %d' % year
 
     def style(p):
         p.title.align = 'center'
