@@ -3,8 +3,8 @@ import pandas as pd
 import bokeh
 from bokeh.io import curdoc
 from bokeh.models.widgets import Tabs
-from bokeh.io import output_file, output_notebook
-from bokeh.plotting import figure, show
+from bokeh.io import output_file
+from bokeh.plotting import show
 
 
 
@@ -24,7 +24,5 @@ tabs = Tabs(tabs = [tab1, tab2, tab3])
 
 
 curdoc().add_root(tabs)
-'''
 output_file('output.html',title = 'Population')
 show(tabs)
-'''
